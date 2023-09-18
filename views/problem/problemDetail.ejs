@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바닐라코딩: CodeWars</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.64.0/codemirror.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.64.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.64.0/mode/javascript/javascript.min.js"></script>
+    <script defer src="/javascripts/codeEditor.js"></script>
+    <script defer src="/javascripts/loading.js"></script>
+  </head>
+  <body>
+    <%- include('../partials/navbar') %>
+    <h1><%= problem.title %></h1>
+    <p>정답자 수: <%= problem.completedUsers %></p>
+    <p>Level <%= problem.difficultyLevel %></p>
+    <div class="problem">
+      <p>문제</p>
+      <div class="description">
+        <%= problem.description %>
+      </div>
+    </div>
+    <div class="solution">
+      <p>풀이</p>
+      <form
+        id="form"
+        action="/problems/<%= problem._id %>"
+        method="post"
+        onsubmit="handleSubmit('loading-grading', '.problemsButton.buttonRight')"
+      >
+        <textarea
+          id="codeEditor"
+          data-initial-code="<%= problem.initialCode %>"
+          data-problem-id="<%= problem._id %>"
+        ></textarea>
+        <input
+          type="hidden"
+          name="solution"
+          id="hiddenSolution"
+        />
+        <div class="problemButtonBox">
+          <div>
+            <button
+              class="problemsButton buttonLeft"
+              type="button"
+              onclick="clearCode()"
+            >
+              초기화
+            </button>
+            <a href="/">
+              <button
+                class="problemsButton buttonLeft"
+                type="button"
+              >
+                문제 리스트로 돌아가기
+              </button>
+            </a>
+          </div>
+          <button
+            class="problemsButton buttonRight"
+            type="submit"
+          >
+            제출
+          </button>
+        </div>
+        <div id="loading-grading" class="loading">채점 중 입니다. 잠시만 기다려 주세요.</div>
+      </form>
+    </div>
+  </body>
+</html>

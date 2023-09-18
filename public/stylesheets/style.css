@@ -1,0 +1,212 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+nav {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #c4c4c4;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+button {
+  cursor: pointer;
+  padding: 15px;
+  background-color: #516a99;
+  color: #f6f6f6;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.submitButton {
+  margin-top: 50px;
+  width: 200px;
+}
+
+.toLoginButton, .toSignupButton {
+  margin-top: 10px;
+  width: 200px;
+}
+
+.goBackButton {
+  margin-top: 50px;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.logoutButton {
+  margin-top: 10px;
+  width: 100px;
+  padding: 10px;
+}
+
+.problemsButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.problemsButton.buttonLeft {
+  background-color: #8d98ae;
+  margin-left: 25px;
+}
+
+.problemsButton.buttonRight {
+  width: 80px;
+}
+
+.buttonBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.problemButtonBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+.error.failure {
+  font-size: 14px;
+}
+
+.signupContainer, .loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 430px;
+}
+
+.signup, .login {
+  background-color: #f6f6f6;
+  padding: 50px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.input {
+  height: 30px;
+  border: 1px solid #c4c4c4;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+
+.divider {
+  width: 100%;
+  border-top: 1px solid #c4c4c4;
+  margin: 30px 0;
+}
+
+.indexContainer {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.indexContainer h1 {
+  margin-left: 20px;
+}
+
+.indexContainer h2 {
+  margin-top: 5px;
+  margin-left: 20px;
+}
+
+.tabs {
+  display: flex;
+  margin: 20px 0;
+}
+
+.tabs li {
+  width: 100px;
+  background-color: #8d98ae;
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  color: #f6f6f6;
+  text-align: center;
+  cursor: pointer;
+}
+
+.problems li {
+  display: none;
+  width: 50%;
+}
+
+.problems li.active {
+  display: block;
+}
+
+.problems li .title{
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.problem, .solution {
+  padding: 20px;
+  margin-top: 30px;
+  background-color: #f6f6f6;
+  border-radius: 10px;
+}
+
+.problem .description {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: #8f8f8f;
+}
+
+.problem > p, .solution > p {
+  font-size: 18px;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+.loading {
+  display: none;
+  position: fixed;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+}

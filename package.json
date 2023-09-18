@@ -1,0 +1,30 @@
+{
+  "name": "codewars",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "18.16.0",
+    "npm": "9.5.1"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "NODE_ENV=development nodemon ./bin/www"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "codemirror": "^6.0.1",
+    "connect-flash": "^0.1.1",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "isolated-vm": "^4.6.0",
+    "mongoose": "^7.5.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

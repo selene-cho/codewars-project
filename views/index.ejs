@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바닐라코딩: CodeWars</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script defer src="/javascripts/index.js"></script>
+    <script defer src="/javascripts/loading.js"></script>
+  </head>
+  <body>
+    <div class="indexContainer">
+      <%- include('./partials/navbar') %>
+      <h1>Codewars</h1>
+      <h2>코딩 전쟁이 일어난다. 모든 대원들, 전투 준비!</h2>
+
+      <ul class="tabs">
+        <li data-level="all">All</li>
+        <li data-level="1">Level 1</li>
+        <li data-level="2">Level 2</li>
+        <li data-level="3">Level 3</li>
+      </ul>
+
+      <ul class="problems">
+        <% problems.forEach(problem => { %>
+          <%- include("./partials/problem", {problem: problem}) %>
+        <% })%>
+      </ul>
+    </div>
+  </body>
+</html>

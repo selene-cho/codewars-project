@@ -5,4 +5,3 @@ function handleSubmit(loadingId, buttonClass) {
   loadingEl.style.display = "block";
   buttonEl.disabled = true;
 }
-

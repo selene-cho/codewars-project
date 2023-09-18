@@ -18,4 +18,3 @@ module.exports = {
     NOT_AUTHENTICATED: "로그인한 상태가 아닙니다.",
   },
 }
-
